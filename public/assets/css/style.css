@@ -912,5 +912,18 @@
     background: var(--bs-dark);
 }
 /*** copyright end ***/
-
+/* custom css */
+.image-input {
+    background-image: url('/assets/img/Image-not-found.png');
+    background-size: cover;
+    background-position: center;
+    height: 280px;
+    width: 250px;
+    display: block; /* Make the input element visible */
+    opacity: 0.7; /* Make the input slightly transparent */
+    cursor: pointer; /* Change the cursor to indicate interaction */
+}
+.form-control.image-input::file-selector-button {
+    display: none; /* Hide the default file selector button */
+}
 
