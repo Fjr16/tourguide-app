@@ -15,13 +15,13 @@
 }
 /*** Spinner End ***/
 
-.back-to-top {
+/* .back-to-top {
     position: fixed;
     right: 30px;
     bottom: 30px;
     transition: 0.5s;
     z-index: 99;
-}
+} */
 
 /*** Button Start ***/
 .btn {

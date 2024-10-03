@@ -17,6 +17,7 @@ return new class extends Migration
             $table->decimal('price', 10, 2)->default(0);
             $table->text('deskripsi')->nullable();
             $table->string('image')->nullable();
+            $table->boolean('isDelete')->default(false);
             $table->timestamps();
         });
     }

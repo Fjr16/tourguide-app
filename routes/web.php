@@ -33,8 +33,6 @@ Route::middleware('auth')->group(function () {
 
 // main
 Route::get('/', [MainController::class, 'index'])->name('tourguide.dashboard');
-Route::get('/about', [MainController::class, 'about'])->name('tourguide.about');
-Route::get('/contact', [MainController::class, 'contactUs'])->name('tourguide.contact');
 
 // product
 Route::get('/product', [ProductController::class, 'index'])->name('tourguide.product');

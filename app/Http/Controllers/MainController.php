@@ -11,14 +11,4 @@ class MainController extends Controller
             'title' => 'Dashboard',
         ]);
     }
-    public function about(){
-        return view('pages.main.about', [
-            'title' => 'About',
-        ]);
-    }
-    public function contactUs(){
-        return view('pages.main.contact', [
-            'title' => 'Contact',
-        ]);
-    }
 }

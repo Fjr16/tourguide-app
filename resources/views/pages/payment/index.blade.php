@@ -32,7 +32,8 @@
                             </table>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <a class="btn btn-danger py-2 px-4 me-2" href="">Back</a>
+                            {{-- <a class="btn btn-danger py-2 px-4 me-2" href="">Back</a> --}}
+                            <button class="btn btn-danger py-2 px-4 me-2" onclick="history.back()" >Back</button>
                             <button class="btn btn-primary py-2 px-4" type="submit">Pay</button>
                         </div>
                     </div>

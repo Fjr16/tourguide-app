@@ -14,5 +14,6 @@ class Product extends Model
         'price',
         'deskripsi',
         'image',
+        'isDelete',
     ];
 }

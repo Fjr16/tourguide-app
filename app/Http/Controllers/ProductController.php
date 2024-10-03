@@ -11,7 +11,7 @@ use Illuminate\Validation\ValidationException;
 class ProductController extends Controller
 {
     public function index() {
-        $data = Product::all();
+        $data = Product::where('isDelete', false)->get();
         return view('pages.product.index', [
             'title' => 'Product',
             'data' => $data,
@@ -56,29 +56,48 @@ class ProductController extends Controller
 
     }
     public function edit($id) {
-        $item = Product::find($id);
-        return view('pages.product.index', [
+        $item = Product::find(decrypt($id));
+        return view('pages.product.edit', [
             'title' => 'Product',
             'item' => $item, 
         ]);
     }
     public function update(Request $request, $id) {
-        $item = Product::find($id);
-        $data = $request->validate([
-            'name' => 'string|size:100',
-            'price' => 'decimal:1,999999999',
-            'deskripsi' => 'text',
-            'image' => 'image',
-        ]);
+        DB::beginTransaction();
+        try {
+            $this->validate($request, [
+                'product_name' => 'required|string|max:100',
+                'product_price' => 'required|integer|digits_between:1,8',
+                'product_desc' => 'required|string',
+                'product_img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            ]);
 
-        dd($data);
-        $item->update($data);
-        // return back()->with('success', 'Berhasil Ditambahkan');
+            $data = [
+                'name' => $request->product_name,
+                'price' => $request->product_price,
+                'deskripsi' => $request->product_desc,
+                // 'image' => $request->product_img,
+            ];
+    
+            // handling image save
+            $item = Product::find(decrypt($id));
+            $item->update($data);
+            DB::commit();
+            return redirect()->route('tourguide.product')->with('success', 'Berhasil Diperbarui');
+        } catch (ValidationException $ve) {
+            DB::rollBack();
+            return back()->with('error', $ve->getMessage());
+        } catch (Exception $e) {
+            DB::rollBack();
+            return back()->with('error', $e->getMessage());
+        }
     }
 
     public function destroy($id) {
-        $item = Product::find($id);
-        $item->delete();
+        $item = Product::find(decrypt($id));
+        $item->update([
+            'isDelete' => true
+        ]);
         return back()->with('success', 'Berhasil Dihapus');
     }
 }
