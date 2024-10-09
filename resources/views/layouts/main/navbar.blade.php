@@ -17,8 +17,8 @@
                             <span class="dropdown-toggle">My Dashboard</span>
                         </a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
-                            <a href="#" class="dropdown-item"><i class="fas fa-shopping-cart me-2"></i> My Orders</a>
+                            <a href="{{ route('profile.edit') }}" class="dropdown-item {{ $title == 'Profile' ? 'active' : '' }}"><i class="fas fa-user-alt me-2"></i> My Profile</a>
+                            <a href="{{ route('tourguide/order.list') }}" class="dropdown-item {{ $title == 'Order List' ? 'active' : '' }}"><i class="fas fa-shopping-cart me-2"></i> My Orders</a>
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
                                 <button type="submit" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</button>
