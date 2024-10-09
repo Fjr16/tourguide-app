@@ -3,7 +3,8 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Tourguide - Your Satisfaction, Our Commitmen</title>
+        <link rel="icon" href="{{ asset('assets/img/logo-app.png') }}" type="image/x-icon">
+        <title>Go-To Mentawai - Your Satisfaction, Our Commitmen</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -24,6 +25,8 @@
         <link href="{{ asset('assets/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
+        {{-- Data Table CSS --}}
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -57,15 +60,9 @@
         <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
             <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-body">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
+                <div class="row align-items-center">
+                    <div class="col-md-12 text-center text-md-center mb-md-0">
+                        <span class="text-body"><a href="/" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Go-To Mentawai</a>, All right reserved.</span>
                     </div>
                 </div>
             </div>
@@ -80,6 +77,8 @@
                 })
             }, 2000);
         </script>
+        
+        @yield('scripts')
 
         <!-- Back to Top -->
         {{-- <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>    --}}
@@ -95,6 +94,12 @@
         <script src="{{ asset('assets/lib/lightbox/js/lightbox.min.js') }}"></script>
         <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
         
+
+        {{-- DataTables JS --}}
+        <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+        <script>
+            $('#dataTable').DataTable();
+        </script>
 
         <!-- Template Javascript -->
         <script src="{{ asset('assets/js/main.js') }}"></script>

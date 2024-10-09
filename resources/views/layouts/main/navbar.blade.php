@@ -1,8 +1,10 @@
 <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 {{ $title != 'Dashboard' ? 'sticky-top shadow-sm' : '' }}" id="{{ $title == 'Dashboard' ? 'navDinamic' : '' }}">
-        <a href="" class="navbar-brand p-0">
-            <h1 class="text-primary"><i class="fas fa-search-dollar me-3"></i>TourGuide</h1>
-            <!-- <img src="img/logo.png" alt="Logo"> -->
+        <a href="/" class="navbar-brand p-0">
+            <h2 class="text-primary">
+                <x-application-logo-mini/> 
+                Go-To Mentawai
+            </h2>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>
@@ -46,7 +48,7 @@
                             <div class="col-lg-0 col-xl-5"></div>
                             <div class="col-xl-7 animated fadeInLeft">
                                 <div class="text-sm-center text-md-end">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To Stocker</h4>
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To Go-To Mentawai</h4>
                                     <h1 class="display-4 text-uppercase text-white mb-4">Invest your money with higher return</h1>
                                     <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
                                     </p>
@@ -76,7 +78,7 @@
                         <div class="row g-5">
                             <div class="col-12 animated fadeInUp">
                                 <div class="text-center">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To Stocker</h4>
+                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To Go-To Mentawai</h4>
                                     <h1 class="display-4 text-uppercase text-white mb-4">Invest your money with higher return</h1>
                                     <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
                                     </p>

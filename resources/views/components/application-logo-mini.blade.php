@@ -1,0 +1,1 @@
+<img src="{{ asset('assets/img/logo-app.png') }}" width="55" height="50" alt="gotomentawai-logo">

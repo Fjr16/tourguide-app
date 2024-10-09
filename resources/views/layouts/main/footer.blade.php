@@ -3,34 +3,23 @@
         <div class="row g-5">
             <div class="col-md-6 col-lg-6 col-xl-4">
                 <div class="footer-item">
-                    <a href="index.html" class="p-0">
-                        <h4 class="text-white"><i class="fas fa-search-dollar me-3"></i>Stocker</h4>
-                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                    <a href="/" class="p-0">
+                        <h4 class="text-white">
+                            <x-application-logo-mini/>
+                            Go-To Mentawai
+                        </h4>
                     </a>
                     <p class="mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
-                    {{-- <div class="d-flex">
-                        <a href="#" class="bg-primary d-flex rounded align-items-center py-2 px-3 me-2">
-                            <i class="fas fa-apple-alt text-white"></i>
-                            <div class="ms-3">
-                                <small class="text-white">Download on the</small>
-                                <h6 class="text-white">App Store</h6>
-                            </div>
-                        </a>
-                        <a href="#" class="bg-dark d-flex rounded align-items-center py-2 px-3 ms-2">
-                            <i class="fas fa-play text-primary"></i>
-                            <div class="ms-3">
-                                <small class="text-white">Get it on</small>
-                                <h6 class="text-white">Google Play</h6>
-                            </div>
-                        </a>
-                    </div> --}}
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-2">
                 <div class="footer-item">
                     <h4 class="text-white mb-4">Quick Links</h4>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                    <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
+                    <a href="{{ route('tourguide.dashboard') }}"><i class="fas fa-angle-right me-2"></i> Home</a>
+                    <a href="{{ route('tourguide.product') }}"><i class="fas fa-angle-right me-2"></i> Product</a>
+                    <a href="{{ route('profile.edit') }}"><i class="fas fa-angle-right me-2"></i> Profile</a>
+                    <a href="{{ route('tourguide/order.list') }}"><i class="fas fa-angle-right me-2"></i> Order List</a>
+                    <a href="{{ route('logout') }}"><i class="fas fa-angle-right me-2"></i> Log Out</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">

@@ -36,9 +36,9 @@
                                 @endif
                             </div>
                             <h4 class="text-uppercase">{{ $item->name ?? '-' }}</h4>
-                            <h5 class="text-primary small">Rp. {{ number_format($item->price ?? '0') }}</h4>
+                            <h5 class="text-primary small">Rp. {{ number_format($item->price ?? 0) }}</h4>
                             <p class="mb-4">{{ Str::limit($item->deskripsi, 80, '...') }}</p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="{{ route('tourguide.checkout') }}">Get This</a>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="{{ route('tourguide.checkout', encrypt($item->id)) }}">Get This</a>
                         </div>
                     </div>
                 @endforeach
