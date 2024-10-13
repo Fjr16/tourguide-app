@@ -55,6 +55,16 @@ class ProductController extends Controller
         }
 
     }
+
+    // checkout page
+    public function show($id) {
+        $item = Product::find(decrypt($id));
+        return view('pages.product.show', [
+            'title' => 'Checkout',
+            'item' => $item,
+        ]);    
+    }
+    
     public function edit($id) {
         $item = Product::find(decrypt($id));
         return view('pages.product.edit', [

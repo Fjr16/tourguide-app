@@ -1,68 +1,95 @@
-<div class="container-fluid footer py-4 wow fadeIn" data-wow-delay="0.2s">
-    <div class="container py-4 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
-        <div class="row g-5">
-            <div class="col-md-6 col-lg-6 col-xl-4">
-                <div class="footer-item">
-                    <a href="/" class="p-0">
-                        <h4 class="text-white">
-                            <x-application-logo-mini/>
-                            Go-To Mentawai
-                        </h4>
-                    </a>
-                    <p class="mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
-                </div>
+ <!-- Page Footer-->
+ <footer class="section footer-corporate context-dark">
+    <div class="footer-corporate-inset">
+      <div class="container">
+        <div class="row row-40 justify-content-lg-between">
+          <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+            <div class="oh-desktop">
+              <div class="wow slideInRight" data-wow-delay="0s">
+                <h6 class="text-spacing-100 text-uppercase">Contact us</h6>
+                <ul class="footer-contacts d-inline-block d-sm-block">
+                  <li>
+                    <div class="unit">
+                      <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                      <div class="unit-body"><a class="link-phone" href="tel:#">+1 323-913-4688</a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit">
+                      <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                      <div class="unit-body"><a class="link-aemail" href="mailto:#">info@demolink.org</a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit">
+                      <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                      <div class="unit-body"><a class="link-location" href="#">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="col-md-6 col-lg-6 col-xl-2">
-                <div class="footer-item">
-                    <h4 class="text-white mb-4">Quick Links</h4>
-                    <a href="{{ route('tourguide.dashboard') }}"><i class="fas fa-angle-right me-2"></i> Home</a>
-                    <a href="{{ route('tourguide.product') }}"><i class="fas fa-angle-right me-2"></i> Product</a>
-                    <a href="{{ route('profile.edit') }}"><i class="fas fa-angle-right me-2"></i> Profile</a>
-                    <a href="{{ route('tourguide/order.list') }}"><i class="fas fa-angle-right me-2"></i> Order List</a>
-                    <a href="{{ route('logout') }}"><i class="fas fa-angle-right me-2"></i> Log Out</a>
-                </div>
+          </div>
+          <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
+            <div class="oh-desktop">
+              <div class="wow slideInDown" data-wow-delay="0s">
+                <h6 class="text-spacing-100 text-uppercase">Popular news</h6>
+                <!-- Post Minimal 2-->
+                <article class="post post-minimal-2">
+                  <p class="post-minimal-2-title"><a href="#">Your Personal Guide to 5 Best Places to Visit on Earth</a></p>
+                  <div class="post-minimal-2-time">
+                    <time datetime="2019-05-04">May 04, 2019</time>
+                  </div>
+                </article>
+                <!-- Post Minimal 2-->
+                <article class="post post-minimal-2">
+                  <p class="post-minimal-2-title"><a href="#">Top 10 Hotels: Rating by Wonder Tour Travel Experts</a></p>
+                  <div class="post-minimal-2-time">
+                    <time datetime="2019-05-04">May 04, 2019</time>
+                  </div>
+                </article>
+              </div>
             </div>
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item">
-                    <h4 class="text-white mb-4">Contact Info</h4>
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                        <p class="text-white mb-0">123 Street New York.USA</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-envelope text-primary me-3"></i>
-                        <p class="text-white mb-0">info@example.com</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="fa fa-phone-alt text-primary me-3"></i>
-                        <p class="text-white mb-0">(+012) 3456 7890</p>
-                    </div>
-                    <div class="d-flex align-items-center mb-4">
-                        <i class="fab fa-firefox-browser text-primary me-3"></i>
-                        <p class="text-white mb-0">Yoursite@ex.com</p>
-                    </div>
-                </div>
+          </div>
+          <div class="col-sm-11 col-md-7 col-lg-5 col-xl-4">
+            <div class="oh-desktop">
+              <div class="wow slideInLeft" data-wow-delay="0s">
+                <h6 class="text-spacing-100 text-uppercase">Quick links</h6>
+                <ul class="row-6 list-0 list-marked list-marked-md list-marked-secondary list-custom-2">
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="#">Our Tours</a></li>
+                  <li><a href="#">Our Team</a></li>
+                  <li><a href="#">Gallery</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+                <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="#">Get in touch</a></div>
+              </div>
             </div>
-             <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item">
-                    <div class="d-flex align-items-center mt-5">
-                        <i class="fab fa-facebook-f text-primary me-3"></i>
-                        <a href="#" class="text-white mb-0">fgdgfdg</a>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="fab fa-twitter text-primary me-3"></i>
-                        <a href="#" class="text-white mb-0">dfgdfgdfg</a>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="fab fa-instagram text-primary me-3"></i>
-                        <a href="#" class="text-white mb-0">dfgdfgfg</a>
-                    </div>
-                    <div class="d-flex align-items-center mb-4">
-                        <i class="fab fa-linkedin-in text-primary me-3"></i>
-                        <a href="#" class="text-white mb-0">dfgdfg</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+    <div class="footer-corporate-bottom-panel">
+      <div class="container">
+        <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
+          <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+            <div>
+              <ul class="list-inline list-inline-sm footer-social-list-2">
+                <li><a class="icon fa fa-facebook" href="#"></a></li>
+                <li><a class="icon fa fa-twitter" href="#"></a></li>
+                <li><a class="icon fa fa-google-plus" href="#"></a></li>
+                <li><a class="icon fa fa-instagram" href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 order-sm-first">
+            <!-- Rights-->
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Wonder Tour</span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
+          </div>
+          <div class="col-sm-6 col-md-4 text-md-right">
+            <p class="rights"><a href="#">Privacy Policy</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
